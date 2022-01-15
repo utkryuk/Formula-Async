@@ -1,13 +1,14 @@
 const mongoose = require('mongoose')
 
-const seasonsSchema = new mongoose.Schema({
-    seasons: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Season'
-    }
+const circuitSchema = new mongoose.Schema({
+    name: String,
+    lat: String,
+    long: String,
+    city: String,
+    country: String
 })
 
-seasonsSchema.set('toJSON', {
+circuitSchema.set('toJSON', {
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString()
         delete returnedObject._id
@@ -15,4 +16,4 @@ seasonsSchema.set('toJSON', {
     }
 })
 
-module.exports = mongoose.model('Seasons', seasonsSchema)
+module.exports = mongoose.model('Circuit', circuitSchema)
