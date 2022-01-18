@@ -20,11 +20,14 @@ def get_json_circuits_by_seasons() -> dict():
                 'round': int(race['round']),
                 'name': race['raceName'],
                 'circuitName': race['Circuit']['circuitName'],
+                'date': race['date'],
                 'url': race['Circuit']['url'],
                 'city': race['Circuit']['Location']['locality'],
                 'country': race['Circuit']['Location']['country'],
                 'location': {
-                    'coordinates': [race['Circuit']['Location']['lat'], race['Circuit']['Location']['long']],
+                    'type': 'Point',
+                    'coordinates': [float(race['Circuit']['Location']['long']), float(race['Circuit']['Location']['lat'])],
+                    'is_location_exact' : True
                 }
             })
         else:
@@ -35,10 +38,13 @@ def get_json_circuits_by_seasons() -> dict():
                     'name': race['raceName'],
                     'circuitName': race['Circuit']['circuitName'],
                     'url': race['Circuit']['url'],
+                    'date': race['date'],
                     'city': race['Circuit']['Location']['locality'],
                     'country': race['Circuit']['Location']['country'],
                     'location': {
-                        'coordinates': [race['Circuit']['Location']['lat'], race['Circuit']['Location']['long']],
+                        'type': 'Point',
+                        'coordinates': [float(race['Circuit']['Location']['long']), float(race['Circuit']['Location']['lat'])],
+                        'is_location_exact' : True
                     }
                 }]
             }
@@ -48,7 +54,7 @@ def get_json_circuits_by_seasons() -> dict():
 if __name__ == "__main__":
     # Get the database
     dbname=get_database()
-    driver_collection = dbname["circuits"]
+    driver_collection = dbname["circuits3"]
     # driver_collection.rename("drivers_dup")
     print("[+] Clearing collection")
     driver_collection.delete_many({})
