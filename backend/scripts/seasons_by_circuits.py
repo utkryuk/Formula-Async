@@ -7,7 +7,7 @@ def get_database():
     load_dotenv()
     CONNECTION_STRING = os.getenv('MONGODB_URI')
     client = MongoClient(CONNECTION_STRING)
-    return client['myFirstDatabase']
+    return client['Circuits']
 
 
 def get_json_circuits_by_seasons() -> dict():
@@ -54,15 +54,14 @@ def get_json_circuits_by_seasons() -> dict():
 if __name__ == "__main__":
     # Get the database
     dbname=get_database()
-    driver_collection = dbname["circuits3"]
     # driver_collection.rename("drivers_dup")
-    print("[+] Clearing collection")
-    driver_collection.delete_many({})
+    # driver_collection.delete_many({})
     print("[+] Importing objects from api")
     seasons = get_json_circuits_by_seasons()
     print("[+] Exporting objects to db")
     
     for key, value in seasons.items():
+        driver_collection = dbname[key]
         driver_collection.insert_one(value)
     print("[+] Job Finished")
 
