@@ -2,11 +2,9 @@ const mongoose = require('mongoose')
 
 const driverSchema = new mongoose.Schema({
     name: String,
-    constructorName: String,
-    season_end_position: Number,
-    total_points: Number,
+    driverId: String,
     points_per_race: Array,
-    country: String
+    country: String,
 })
 driverSchema.set('toJSON', {
     transform: (document, returnedObject) => {
