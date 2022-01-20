@@ -41,11 +41,18 @@ export default function Album() {
       
       <main>
         {/* Hero unit */}
-        <Box>
+        <Box
+        backgroundImage='Map.png'
+        sx={{
+          // bgcolor: 'background.paper',
+          pt: 8,
+          pb: 6,
+        }}>
         <Avatar
-          alt="F1 logo"
-          src="media/F1-logo.png"
-          sx={{ width: 50, height: 50 }}
+        className = "mx-80"
+          alt=""
+          src="F1-logo.png"
+          sx={{ width: 100, height: 100 }}
         />
           <Container maxWidth="sm">
             <Typography
@@ -55,12 +62,10 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              FormulaSync
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+              For the love of F1
             </Typography>
             <Stack
               sx={{ pt: 4 }}
