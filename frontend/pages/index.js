@@ -17,14 +17,18 @@ export default function Home() {
       <Album/>
       <DemoChart/>
 
-      {/* Circuits */}
-        <a onClick={() => router.push("/circuits")}>Circuits Year Wise</a>
-
       {/* Drivers */}
         <a onClick={() => router.push("/drivers")}>Drivers vs Drivers</a>
 
       {/* Constructors */}
         <a onClick={() => router.push("/constructors")}>Constructors vs Constructors</a>
+
+      {/* Display Driver Chart */}
+        <a onClick={() => router.push("/championship/driver")}>Display ChampionShip Points</a>
+        
+      {/* Circuits */}
+        <a onClick={() => router.push("/circuits")}>Circuits Year Wise</a>
+
     </div>
   )
 }
