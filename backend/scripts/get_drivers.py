@@ -79,6 +79,7 @@ def year_wise_race_driver_data(start_year: int, end_year:int) -> dict:
             racers.append(
                {
                   "driverId": driverId,
+                  "driverName": results["Driver"]["givenName"] + " " + results["Driver"]["familyName"],
                   "rank": int(results["position"]),
                   "points": float(results["points"]),
                   "cumulative_points": stored_points[driverId]
@@ -124,7 +125,7 @@ def get_json_race_drivers() -> dict():
    #     driver_url+".json", params={'limit': 1000}).json()
 
 
-   fullraces = year_wise_race_driver_data(2000,2021)
+   fullraces = year_wise_race_driver_data(1980,2021)
    return fullraces
 
 
