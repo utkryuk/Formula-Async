@@ -30,7 +30,8 @@ const Header = ({tab}) => {
 
   const router = useRouter();
 
-  const pages = ['drivers', 'constructors', 'circuits'];
+  const pages = ['drivers', 'constructors', 'circuits','championship/driver','championship/constructor'];
+  const pagesNames = ['drivers', 'constructors', 'circuits','driver Championship','Constructor Championship'];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -96,9 +97,9 @@ const Header = ({tab}) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="end">{page}</Typography>
+              {pagesNames.map((pageName) => (
+                <MenuItem key={pageName} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="end">{pageName}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -112,7 +113,7 @@ const Header = ({tab}) => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page,i) => (
              
               
               // <Button
@@ -128,7 +129,7 @@ const Header = ({tab}) => {
                 onClick={() => router.push("/"+page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {pagesNames[i]}
               </Button>
               
             ))}

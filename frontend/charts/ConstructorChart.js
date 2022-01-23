@@ -9,12 +9,8 @@ const ConstructorChart = () => {
   const chartDiv = useRef(null);
   const chartId = '729eeced-ed75-4da8-b991-75e8ae91c8b2';
   const [filter, setFilter] = useState(
-  { $and: [{"year": 2021}, {
-    $or: [ {
-      "races.constructors.constructorId":"red_bull"},{"races.constructors.constructorId": "mercedes"}
-    ] }
-    ]
-  });
+    {year:2021
+    });
 
   var set_of_years = []
   for(var i= 2000 ; i < 2022; i+=1 ){
