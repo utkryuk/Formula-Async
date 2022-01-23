@@ -41,7 +41,7 @@ export default function Album() {
       
       <main>
         {/* Hero unit */}
-        <div class="h-50 bg-gradient-to-b from-black to-black">
+        <div className="h-50 bg-gradient-to-b from-black to-black">
         <Box
         className = "flex"
         backgroundImage="Map.png"
@@ -58,7 +58,7 @@ export default function Album() {
             className = "flex">
             <Typography 
             className='text-white ml-60'
-            variant="h5" align="end" color="text.secondary" paragraph>
+            variant="h5" align="right" color="text.secondary" paragraph>
               For the love of
             </Typography>
             <Avatar
