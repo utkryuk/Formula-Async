@@ -1,16 +1,12 @@
 import React from 'react';
-import ConstructorChart from '../charts/ConstructorChart';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import ConstructorVsConstructor from '../charts/ConstructorVsConstructor';
 
 const constructors = () => {
-  return <div>
-    <Header/>
-    <ConstructorChart/>
-    Constructors
-    <Footer/>
-    </div>;
-
+  return (
+    <div>
+      <ConstructorVsConstructor />
+    </div>
+  )
 };
 
 export default constructors;
