@@ -8,10 +8,10 @@ import Link from 'next/link'
 import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
-  return <div className = "bottom-0 z-20 bg-gray-200 dark:bg-black justify-center py-5 lg:py-10 lg:px-5 shadow-lg">
+  return <div className = "bottom-0 z-20 bg-gray-800 dark:bg-black justify-center py-5 lg:py-10 lg:px-5 shadow-lg">
 
-  <h3 className = "flex text-gray-400 justify-center font-semibold">
-    Made by <span className = "link px-2 text-gray-500">FormulaSync</span>
+  <h3 className = "flex text-gray-500 justify-center font-semibold">
+    Made by <span className = "link px-2 text-gray-400">FormulaSync</span>
     
   </h3>
 <div className = "flex text-gray-400 justify-center">

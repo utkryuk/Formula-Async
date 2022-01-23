@@ -12,7 +12,9 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-
+// import * as Colors from '@mui/styles/colors';
+// import MuiThemeProvider from '@mui/styles/MuiThemeProvider';
+// import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -26,6 +28,21 @@ function ElevationScroll(props) {
   });
 
 }
+
+// const muiTheme = getMuiTheme({
+//   palette: {
+//     textColor: Colors.darkBlack,
+//     primary1Color: Colors.white,
+//     primary2Color: Colors.indigo700,
+//     accent1Color: Colors.redA200,
+//     pickerHeaderColor: Colors.darkBlack,
+//   },
+//   appBar: {
+//     height: 60,
+//   },
+// });
+
+
 const Header = ({imageLink}) => {
 
   const router = useRouter();
@@ -55,14 +72,14 @@ const Header = ({imageLink}) => {
     <Box className = "my-20" 
     sx={{ flexGrow: 1 }}>
       <AppBar 
-      color = "primary"
       
+      style={{ background: '#000000' }}
        position="fixed">
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            color="primary"
             aria-label="menu"
             sx={{ mr: 2 }}
           >

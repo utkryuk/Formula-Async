@@ -85,7 +85,7 @@ const DriverVsDriver = () => {
   }
   
   return (
-    <div className = "flex justify-center space-around">
+    <div className = "flex justify-center space-around bg-slate-400">
             <div className="field">
             <Box className = "mt-5">
           <Autocomplete disablePortal id="driver1input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label== value} defaultValue={"Lewis Hamilton"} renderInput={(params) => <TextField {...params} label="Drivers" />} />

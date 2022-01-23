@@ -41,44 +41,46 @@ export default function Album() {
       
       <main>
         {/* Hero unit */}
+        <div class="h-50 bg-gradient-to-b from-black to-black">
         <Box
+        className = "flex"
         backgroundImage="Map.png"
         sx={{
           // bgcolor: 'background.paper',
-          pt: 8,
-          pb: 6,
+          pt: 2,
+          pb: 4,
         }}>
-        <Avatar
-        className = "mx-80"
+        {/* <Avatar
+        className = "mx-auto"
           alt=""
           src="F1-logo.png"
-          sx={{ width: 200, height: 200 }}
+          sx={{ width: 200, height: 140 }}
+        /> */}
+          <Container maxWidth="sm" className = "my-auto mx-auto">
+          <h1 className="font-semibold text-5xl md:text-6xl lg:text-7xl height-10 width-10 text-white">
+      Formula<span className = "text-red-700">Sync</span></h1>
+            <div
+            className = "flex">
+            <Typography 
+            className='text-white ml-60'
+            variant="h5" align="end" color="text.secondary" paragraph>
+              For the love of
+            </Typography>
+            <Avatar
+        className = "mx-3"
+          alt=""
+          src="F1-logo.png"
+          sx={{ width: 46, height: 32 }}
         />
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              FormulaSync
-            </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              For the love of F1
-            </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack>
+           
+            </div>
           </Container>
-          </Box>
+          <div className= "flex justify-center pb-20 mr-5">
+            <img src = "image.jpg" height="700px"></img>
+          </div>
         
+          </Box>
+        </div>  
       </main>
       {/* Footer */}
       

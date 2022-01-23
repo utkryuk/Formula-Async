@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <Header/>
       <Album/>
-      <DemoChart/>
+      
       <Footer/>
       {/* Drivers */}
         {/* <a onClick={() => router.push("/drivers")}>Drivers vs Drivers</a>
