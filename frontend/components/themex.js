@@ -50,15 +50,10 @@ export default function Album() {
           pt: 2,
           pb: 4,
         }}>
-        {/* <Avatar
-        className = "mx-auto"
-          alt=""
-          src="F1-logo.png"
-          sx={{ width: 200, height: 140 }}
-        /> */}
+        
           <Container maxWidth="sm" className = "my-auto mx-auto">
           <h1 className="font-semibold text-5xl md:text-6xl lg:text-7xl height-10 width-10 text-white">
-      Formula<span className = "text-red-700">Sync</span></h1>
+      Formula<span className = "text-red-600">Sync</span></h1>
             <div
             className = "flex">
             <Typography 

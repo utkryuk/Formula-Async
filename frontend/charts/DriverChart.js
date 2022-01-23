@@ -29,7 +29,7 @@ const DriverChart = () => {
   }, [chart, filter, rendered]);
 
   return (
-    <div className = "flex mt-10 justify-center align-middle bg-slate-400">
+    <div className = "flex mt-10 justify-center align-middle bg-slate-300">
       <div className = "my-auto mx-10">
         <YearPicker year={year} setYear={setYear} minDate={new Date("1980-01-01")}/>
       </div> 

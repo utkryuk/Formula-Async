@@ -30,7 +30,7 @@ const CircuitChart = () => {
   }, [year]);
 
   return (
-  <div className="flex mt-10 justify-center align-middle">
+  <div className="flex mt-10 justify-center align-middle bg-slate-300">
     <div className="my-auto mx-10">
       <YearPicker year={year} setYear={setYear} minDate={new Date("2016-01-01")} maxDate={new Date("2022-01-01")} />
     </div>

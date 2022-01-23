@@ -7,6 +7,8 @@ import Album from '../components/themex'
 import {useRouter} from 'next/router';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { style } from '@mui/system'
+import Snowflake from '../components/Snowflake'
 
 export default function Home() {
   const router = useRouter();
@@ -15,7 +17,8 @@ export default function Home() {
     router.push(str);
   }
   return (
-    <div>
+    <div >
+      <Snowflake/>
       <Header/>
       <Album/>
       
