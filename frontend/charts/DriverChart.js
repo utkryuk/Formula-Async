@@ -12,7 +12,7 @@ const DriverChart = () => {
   const [filter, setFilter] = useState({"year": year.getFullYear()});
 
   const [rendered, setRendered] = useState(false);
-  const [chart] = useState(sdk.createChart({chartId: chartId, height: '600px', width: '800px', theme: "dark", autoRefresh: true, filter: filter}));
+  const [chart] = useState(sdk.createChart({chartId: chartId, height: '700px', width: '800px', theme: "dark", autoRefresh: true, filter: filter}));
 
   useEffect(() => {
     chart.render(chartDiv.current).then(() => setRendered(true)).catch(err => console.log("Error during Charts rendering.", err));
@@ -29,9 +29,11 @@ const DriverChart = () => {
   }, [chart, filter, rendered]);
 
   return (
-    <div>
-      <YearPicker year={year} setYear={setYear} minDate={new Date("1980-01-01")}/>
-      <div className="chart" ref={chartDiv}/>
+    <div className = "flex mt-10 justify-center align-middle">
+      <div className = "my-auto mx-10">
+        <YearPicker year={year} setYear={setYear} minDate={new Date("1980-01-01")}/>
+      </div> 
+      <div className="chart my-5" ref={chartDiv}/>
     </div>);
 }
 

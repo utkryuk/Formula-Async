@@ -79,21 +79,23 @@ const DriverVsDriver = () => {
         return value === selected_drivers[index];
       })
       ){
-        setChart(sdk.createChart({ chartId: chartId[0], height: '600px', width: '800px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
+        setChart(sdk.createChart({ chartId: chartId[0], height: '800px', width: '800px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
       }
     }
   }
   
   return (
-    <div>
-      <div className="field">
-        <Box>
+    <div className = "flex justify-center space-around">
+            <div className="field">
+            <Box className = "mt-5">
           <Autocomplete disablePortal id="driver1input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label== value} defaultValue={"Lewis Hamilton"} renderInput={(params) => <TextField {...params} label="Drivers" />} />
           <Autocomplete disablePortal id="driver2input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label == value} defaultValue={"Valtteri Bottas"} renderInput={(params) => <TextField {...params} label="Drivers" />} />
         </Box>
       </div>
-      <YearPicker year={year} setYear={setYear} minDate={new Date("2007-01-01")} />
-      <div className="chart" ref={chartDiv} />
+      <YearPicker 
+      className = "mt-40"
+      year={year} setYear={setYear} minDate={new Date("2007-01-01")} />
+      <div className="chart my-5" ref={chartDiv} />
     </div>
     );
 }

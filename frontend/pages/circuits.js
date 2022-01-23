@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ChartsEmbedSDK from '@mongodb-js/charts-embed-dom'
 import { Select, MenuItem, Button, FormControl, InputLabel } from '@mui/material';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const circuits = () => {
 
@@ -43,6 +45,7 @@ const circuits = () => {
 
   return (
     <div>
+      <Header/>
       <FormControl >
         <InputLabel id="demo-simple-select-label">Year</InputLabel>
         <Select
@@ -61,6 +64,7 @@ const circuits = () => {
           Submit
         </Button>
         <div id = "mycharts"></div>
+        <Footer/>
         {/* <div className='chart' ref={chartDiv} /> */}
     </div>
   )

@@ -18,7 +18,7 @@ const ConstructorChart = () => {
   }
 
   const [rendered, setRendered] = useState(false);
-  const [chart] = useState(sdk.createChart({chartId: chartId, height: '600px', width: '800px', theme: "dark", autoRefresh: true, filter: filter}));
+  const [chart] = useState(sdk.createChart({chartId: chartId, height: '800px', width: '1000px', theme: "dark", autoRefresh: true, filter: filter}));
 
   useEffect(() => {
     chart.render(chartDiv.current).then(() => setRendered(true)).catch(err => console.log("Error during Charts rendering.", err));
@@ -36,10 +36,12 @@ const ConstructorChart = () => {
   }
 
   return (
-    <div>
+    <div className = "flex mt-10 justify-center align-middle">
+      <div className='my-auto mx-10'>
       {/* <ThemeProvider theme={theme}>
         <AppBar title="Driver Charts" style={ { background: "#f57f17" }} titleStyle = { { color: "#ff5252" }} showMenuIconButton={false}/> */}
          <Select 
+         className = "px-5"
           value={filter.year}   
           onChange={handleChange}   
          >
@@ -49,8 +51,9 @@ const ConstructorChart = () => {
            })}
 
         </Select>
+        </div>
         {/* </ThemeProvider> */}
-      <div className="chart" ref={chartDiv}/>
+      <div className="chart my-5" ref={chartDiv}/>
     </div>);
 }
 

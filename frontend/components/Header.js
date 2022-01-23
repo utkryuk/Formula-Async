@@ -26,7 +26,7 @@ function ElevationScroll(props) {
   });
 
 }
-const Header = ({tab}) => {
+const Header = ({imageLink}) => {
 
   const router = useRouter();
 
@@ -49,13 +49,14 @@ const Header = ({tab}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  console.log(tab)
+  
   
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box className = "my-20" 
+    sx={{ flexGrow: 1 }}>
       <AppBar 
       color = "primary"
-      enableColorOnDark="true"
+      
        position="fixed">
         <Toolbar>
           <IconButton
@@ -65,7 +66,8 @@ const Header = ({tab}) => {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <img src = "F1-logo.png" height = "100px" width = "100px"/>
+            {console.log(imageLink)}
+            <img src = {imageLink?imageLink:'/F1-logo.png'} height = "100px" width = "100px"/>
           </IconButton>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -123,7 +125,7 @@ const Header = ({tab}) => {
               // >
               //   {page}
               // </Button>
-                tab != page &&
+                
                 <Button
                 key={page}
                 onClick={() => router.push("/"+page)}
