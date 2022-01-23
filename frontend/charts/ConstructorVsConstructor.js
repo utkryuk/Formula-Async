@@ -67,7 +67,6 @@ const ConstructorVsConstructor = () => {
     
     const updateConstructors = (event, newValue) => {
         event.preventDefault();
-        console.log(newValue, event)
         if (event.target.id.includes("constructor1input")){
             setConstructors({...constructors, "constructor1": newValue});
         } else if (event.target.id.includes("constructor2input")){

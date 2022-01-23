@@ -66,7 +66,6 @@ const Header = ({imageLink}) => {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            {console.log(imageLink)}
             <img src = {imageLink?imageLink:'/F1-logo.png'} height = "100px" width = "100px"/>
           </IconButton>
           

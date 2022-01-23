@@ -5,8 +5,11 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 import Box from '@mui/material/Box';
 
-export default function YearPicker({year, setYear, minDate}) {
-
+export default function YearPicker({year, setYear, minDate, maxDate}) {
+  
+  if(maxDate == null){
+    maxDate = new Date('2021-01-01');
+  }
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Box m={2}>
@@ -15,7 +18,7 @@ export default function YearPicker({year, setYear, minDate}) {
           views={['year']}
           label="Year"
           minDate={minDate}
-          maxDate={new Date('2021-01-01')}
+          maxDate={maxDate}
           value={year}
           onChange={setYear}
           renderInput={(params) => <TextField {...params} helperText={null}/>}
