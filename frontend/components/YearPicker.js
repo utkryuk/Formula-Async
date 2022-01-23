@@ -18,7 +18,7 @@ export default function YearPicker({year, setYear}) {
           maxDate={new Date('2021-01-01')}
           value={year}
           onChange={setYear}
-          renderInput={(params) => <TextField {...params} helperText={null} />}
+          renderInput={(params) => <TextField {...params} helperText={null} type="date"/>}
         />
       </Box>
     </LocalizationProvider>

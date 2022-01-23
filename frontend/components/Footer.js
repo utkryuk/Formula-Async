@@ -1,8 +1,5 @@
 import React from 'react';
 import {
-  AiFillGithub
-} from 'react-icons/ai'
-import {
   MailIcon
 } from "@heroicons/react/solid"
 import FooterIcon from './FooterIcon'
@@ -21,7 +18,7 @@ const Footer = () => {
 
 <Link href="https://github.com/utkryuk/Formula-Async">  
 <a>
-      <span><FooterIcon Icon = {AiFillGithub}/></span>
+      <span><FooterIcon /></span>
     </a>
     </Link>
 <Link href = "mailto:formulaonemongo@gmail.com">
