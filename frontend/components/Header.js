@@ -141,15 +141,16 @@ const Header = ({imageLink}) => {
               // >
               //   {page}
               // </Button>
-                
+                <div className='cursor-pointer'>
                 <Button
+                
                 key={page}
                 onClick={() => router.push("/"+page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {pagesNames[i]}
               </Button>
-              
+              </div>
             ))}
           </Box>
         </Toolbar>
