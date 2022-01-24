@@ -79,7 +79,7 @@ const DriverVsDriver = () => {
         return value === selected_drivers[index];
       })
       ){
-        setChart(sdk.createChart({ chartId: chartId[0], height: '900px', width: '1200px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
+        setChart(sdk.createChart({ chartId: chartId[0], height: '700px', width: '1000px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
       }
     }
   }
