@@ -28,12 +28,12 @@ You will need these preinstalled:
 
 ### Tech Stack
 
-- [https://nextjs.org/](NextJS)
-- [https://www.mongodb.com/](MongoDB) with [https://www.mongodb.com/products/charts](MongoDB charts)
-- [https://mui.com/](Material UI) and [https://tailwindcss.com/](Tailwind CSS)
-- [https://www.python.org/](Python)
-- [https://nodejs.org/en/](NodeJS)
-- [https://ergast.com/mrd/](Ergast F1 API)
+- [NextJS](https://nextjs.org/)
+- [MongoDB](https://www.mongodb.com/) with [MongoDB charts](https://www.mongodb.com/products/charts)
+- [Material UI](https://mui.com/) and [Tailwind CSS](https://tailwindcss.com/)
+- [Python](https://www.python.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [Ergast F1 API](https://ergast.com/mrd/)
 
 
 <!-- CONTACT -->
@@ -41,4 +41,4 @@ You will need these preinstalled:
 
 **Team Name**: Async
 
-**Project Link**: [https://github.com/utkryuk/Formula-Async](https://github.com/utkryuk/Formula-Async)
+**Project Link**: [Formula Async](https://github.com/utkryuk/Formula-Async)
