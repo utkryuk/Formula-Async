@@ -79,7 +79,7 @@ const ConstructorVsConstructor = () => {
                 function (value, index) {
                     return value === selected_constructors[index];
                 })){
-                setChart(sdk.createChart({ chartId: chartId[0], height: '600px', width: '800px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
+                setChart(sdk.createChart({ chartId: chartId[0], height: '700px', width: '1000px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
             }
         }
     }

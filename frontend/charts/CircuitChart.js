@@ -17,7 +17,7 @@ const CircuitChart = () => {
   const chartDiv = useRef(null)
   const [year, setYear] = useState(new Date('2022-01-01'));
   const [rendered, setRendered] = useState(false);
-  const [chart, setChart] = useState(sdk.createChart({ chartId: temp[year.getFullYear()], height: '700px', width: '900px', theme: "dark", autoRefresh: true}));
+  const [chart, setChart] = useState(sdk.createChart({ chartId: temp[year.getFullYear()], height: '800px', width: '900px', theme: "dark", autoRefresh: true}));
 
   useEffect(() => {
     if(!rendered){
