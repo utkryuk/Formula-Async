@@ -76,7 +76,8 @@ const Header = ({imageLink}) => {
       style={{ background: '#000000' }}
        position="fixed">
         <Toolbar>
-          <IconButton onClick={() => router.push('/')}
+          <IconButton
+          onClick={() => router.push("/")}
             size="large"
             edge="start"
             color="primary"
@@ -141,10 +142,11 @@ const Header = ({imageLink}) => {
               // >
               //   {page}
               // </Button>
-                <div className='cursor-pointer'>
+                <div className='cursor-pointer' key={page}>
+                  
                 <Button
                 
-                key={page}
+                
                 onClick={() => router.push("/"+page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
