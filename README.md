@@ -8,7 +8,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-You will need these preinstalled:
+You will need these preinstalled using command line:
 * yarn
   ```sh
   npm install --global yarn
