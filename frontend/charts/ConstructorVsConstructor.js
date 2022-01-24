@@ -48,7 +48,7 @@ const ConstructorVsConstructor = () => {
     ])
 
     const [rendered, setRendered] = useState(false)
-    const [chart, setChart] = useState(sdk.createChart({ chartId: chartId[1], height: '800px', width: '1000px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear()} }));
+    const [chart, setChart] = useState(sdk.createChart({ chartId: chartId[1], height: '700px', width: '1000px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear()} }));
 
 
     useEffect(() => {
@@ -85,19 +85,28 @@ const ConstructorVsConstructor = () => {
     }
 
     return (
-        <div className = "flex justify-center space-around bg-slate-300">
+      <div className = "h-screen w-screen bg-slate-300">
+        <div className = "flex bg-slate-300 mt-20 mx-20">
+          <div>
+          <div className = "font-bold text-gray-600 mr-10 my-10">
+      Compare 2 Constructors of your choice based on their performance in a year
+      </div>
             <div className="field">
             <Box className = "mt-5">
-                <Autocomplete disablePortal id="constructor1input" onChange={updateConstructors} options={list_of_constructors} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label== value} defaultValue={"Mercedes"} renderInput={(params) => <TextField {...params} label="Constructor 1" />} />
+                <Autocomplete className = "mb-4" disablePortal id="constructor1input" onChange={updateConstructors} options={list_of_constructors} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label== value} defaultValue={"Mercedes"} renderInput={(params) => <TextField {...params} label="Constructor 1" />} />
                 <Autocomplete disablePortal id="constructor2input" onChange={updateConstructors} options={list_of_constructors} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label == value} defaultValue={"Ferrari"} renderInput={(params) => <TextField {...params} label="Constructor 2" />} />
             </Box>
-            </div>
-            <div>
-                <YearPicker 
-                className = "mt-40"
+            <div className = "mt-5">
+            <YearPicker 
+                
                 year={year} setYear={setYear} minDate={new Date("2007-01-01")} />
+            </div>
+            </div>
+                
                 </div>
-            <div className="chart my-5" ref={chartDiv} />
+            <div className="chart my-5 mt-10" ref={chartDiv} />
+        
+        </div>
         </div>
   
     )

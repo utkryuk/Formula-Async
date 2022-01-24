@@ -41,7 +41,7 @@ export default function Album() {
       
       <main>
         {/* Hero unit */}
-        <div className="h-50 bg-gradient-to-b from-black to-black">
+        <div className="pt-20 h-100 bg-gradient-to-b from-black to-black">
         <Box
         className = "flex"
         backgroundImage="Map.png"
@@ -68,6 +68,9 @@ export default function Album() {
           sx={{ width: 46, height: 32 }}
         />
            
+            </div>
+            <div className= "text-gray-200">
+              Random stats for random fans brought to you by random nerds
             </div>
           </Container>
           <div className= "flex justify-center pb-20 mr-5">

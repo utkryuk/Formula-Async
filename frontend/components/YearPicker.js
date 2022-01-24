@@ -12,7 +12,7 @@ export default function YearPicker({year, setYear, minDate, maxDate}) {
   }
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Box m={2}>
+      <Box>
         <DatePicker
           inputFormat="yyyy"
           views={['year']}

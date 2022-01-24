@@ -48,7 +48,7 @@ const DriverVsDriver = () => {
   ]);
   
   const [rendered, setRendered] = useState(false);
-  const [chart, setChart] = useState(sdk.createChart({ chartId: chartId[1], height: '600px', width: '800px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear()} }));
+  const [chart, setChart] = useState(sdk.createChart({ chartId: chartId[1], height: '700px', width: '1000px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear()} }));
 
   useEffect(() => {
     chart.render(chartDiv.current).then(() => setRendered(true)).catch(err => console.log("Error during Charts rendering.", err));
@@ -79,23 +79,36 @@ const DriverVsDriver = () => {
         return value === selected_drivers[index];
       })
       ){
-        setChart(sdk.createChart({ chartId: chartId[0], height: '800px', width: '800px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
+        setChart(sdk.createChart({ chartId: chartId[0], height: '900px', width: '1200px', theme: "dark", autoRefresh: true, filter: { "year": year.getFullYear() } }))
       }
     }
   }
   
   return (
-    <div className = "flex justify-center space-around bg-slate-300">
-            <div className="field">
-            <Box className = "mt-5">
-          <Autocomplete disablePortal id="driver1input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label== value} defaultValue={"Lewis Hamilton"} renderInput={(params) => <TextField {...params} label="Drivers" />} />
-          <Autocomplete disablePortal id="driver2input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label == value} defaultValue={"Valtteri Bottas"} renderInput={(params) => <TextField {...params} label="Drivers" />} />
-        </Box>
+    <div className = "h-screen w-screen bg-slate-300">
+      
+    <div className = "flex bg-slate-300 mt-20 mx-20">
+      <div>
+    <div className = "font-bold text-gray-600 mr-10 my-10">
+      Compare 2 drivers of your choice based on their performance in a year
       </div>
-      <YearPicker 
-      className = "mt-40"
+            <div className="field">
+
+            <Box className = "mt-5">
+
+          <Autocomplete className="mb-4" disablePortal id="driver1input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label== value} defaultValue={"Lewis Hamilton"} renderInput={(params) => <TextField {...params} label="Driver 1" />} />
+          <Autocomplete disablePortal id="driver2input" onChange={updateDrivers} options={list_of_drivers} sx={{ width: 300 }} isOptionEqualToValue={(option, value) => option.label == value} defaultValue={"Valtteri Bottas"} renderInput={(params) => <TextField {...params} label="Driver 2" />} />
+          </Box>
+          <div className = "mt-5">
+          <YearPicker 
+      
       year={year} setYear={setYear} minDate={new Date("2007-01-01")} />
-      <div className="chart my-5" ref={chartDiv} />
+        </div>
+      </div>
+      
+      </div>
+      <div className="chart mt-10 mx-5" ref={chartDiv} />
+    </div>
     </div>
     );
 }

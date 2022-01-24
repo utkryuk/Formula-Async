@@ -17,7 +17,7 @@ const CircuitChart = () => {
   const chartDiv = useRef(null)
   const [year, setYear] = useState(new Date('2022-01-01'));
   const [rendered, setRendered] = useState(false);
-  const [chart, setChart] = useState(sdk.createChart({ chartId: temp[year.getFullYear()], height: '700px', width: '800px', theme: "dark", autoRefresh: true}));
+  const [chart, setChart] = useState(sdk.createChart({ chartId: temp[year.getFullYear()], height: '700px', width: '900px', theme: "dark", autoRefresh: true}));
 
   useEffect(() => {
     if(!rendered){
@@ -26,15 +26,22 @@ const CircuitChart = () => {
   }, [chart]);
 
   useEffect(() => {
-    setChart(sdk.createChart({ chartId: temp[year.getFullYear()], height: '700px', width: '1000px', theme: "dark", autoRefresh: true}))
+    setChart(sdk.createChart({ chartId: temp[year.getFullYear()], height: '800px', width: '900px', theme: "dark", autoRefresh: true}))
   }, [year]);
 
   return (
+    <div className = "h-screen w-screen bg-slate-300">
   <div className="flex mt-10 justify-center align-middle bg-slate-300">
-    <div className="my-auto mx-10">
+    <div className="mt-20 mx-10">
+    <div className = "font-bold text-gray-600">
+      Year Wise Calendar of Circuits 
+      </div>
+      <div className = "my-auto mx-5 mt-5">
       <YearPicker year={year} setYear={setYear} minDate={new Date("2016-01-01")} maxDate={new Date("2022-01-01")} />
     </div>
+    </div>
     <div className="chart my-5" ref={chartDiv} />
+  </div>
   </div>
   )
 };
