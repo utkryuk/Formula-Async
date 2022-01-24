@@ -76,14 +76,14 @@ const Header = ({imageLink}) => {
       style={{ background: '#000000' }}
        position="fixed">
         <Toolbar>
-          <IconButton
+          <IconButton onClick={() => router.push('/')}
             size="large"
             edge="start"
             color="primary"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <img src = {imageLink?imageLink:'/F1-logo.png'} height = "100px" width = "100px"/>
+            <img src = {imageLink?imageLink:'/F1-logo.png'} height = "100px" width = "100px" />
           </IconButton>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
