@@ -1,6 +1,5 @@
 # :zap: FormulaSync
 
-Hosted on https://formula-async.vercel.app/
 
 <!-- GETTING STARTED -->
 ## Getting Started
